@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.main.MainActivtiy">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        style="@style/app_bar_1"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:contentScrim="@color/toolbar_scrim_bg"
+            app:titleEnabled="false">
+
+            <ir.moovic.entertainment.ui.helper.MyImageView
+                android:id="@+id/iv_appbar_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:myiv_ratioW="16"
+                app:myiv_ratioH="9"
+                app:layout_collapseMode="parallax"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="@dimen/tab_1_height"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:paddingStart="@dimen/toolbar_padding_rl"
+                    android:paddingEnd="@dimen/toolbar_padding_rl">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/toolbar_back"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.50"
+                        app:layout_constraintDimensionRatio="@string/ratio_1_1_w"
+                        android:padding="@dimen/content_padding_0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:tint="@color/text_color_1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:srcCompat="@drawable/ic_arrow_right"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        app:layout_constraintWidth_percent="0.50"
+                        app:layout_constraintHeight_percent="0.65"
+                        app:layout_constraintEnd_toStartOf="@id/toolbar_back"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="@dimen/toolbar_padding_rl"
+                        android:layout_marginEnd="@dimen/toolbar_padding_rl"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeMinTextSize="12sp"
+                        android:ellipsize="end"
+                        android:lines="1" android:maxLines="1"
+                        android:textColor="@color/text_color_1"
+                        android:text="@string/back"
+                        android:gravity="right|center_vertical"
+                        android:alpha="0"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ir.moovic.entertainment.ui.helper.MyTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_1_height"
+                app:tabMode="scrollable"
+                app:tabGravity="fill"
+                app:tabSelectedTextColor="@color/tab_1_text_selected"
+                app:tabTextColor="@color/tab_1_text_normal"
+                app:tabIndicatorColor="@color/tab_1_indicator"
+                app:tabPaddingTop="6dp"
+                app:tabPaddingBottom="6dp"
+                app:tabIndicatorHeight="3.4dp"
+                app:tabTextAppearance="@style/tab_view_style_1"
+                fontPath="fonts/IranSans-Bold.ttf"
+                app:tabBackground="@color/tab_1_bg_color"
+                app:layout_collapseMode="pin"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="?attr/actionBarSize"
+                />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_leagues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

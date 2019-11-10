@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'IranSans';
+	src: url("fonts/IranSans.ttf")
+}
+
+@font-face {
+	font-family: 'IranYekan';
+	src: url("fonts/IranYekan.ttf")
+}
+
+body , p {
+	font-family: 'IranYekan';
+	line-height: 200%;
+	margin: 0;
+	color: #080808;
+	direction: rtl;
+	text-align: justify;
+	padding : 0;
+	font-size: 15px;
+}
+
+#resourcename {
+    font-size: 11px;
+    color: #1565c0;
+}
+
+
+strong {
+    color: #000000;
+}
+
+input,textarea{
+	max-width: 100%;
+}
+
+input,textarea {
+	background: #222222 !important;
+	color: #111111;
+}
+
+img {
+	height: auto;
+	min-width: 50px;
+	min-height: 50px;
+	margin:4px 0 4px 0;
+	width:100% !important;
+	border-radius: 4px;
+}

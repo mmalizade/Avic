@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.main.models.ResBundle"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/corner_radius_2"
+        app:cardElevation="0dp"
+        app:contentPadding="0dp"
+        >
+
+        <ir.moovic.entertainment.ui.helper.MyImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:myiv_centerCrop="false"
+            app:myIvAspectRatio="@{obj.aspectRatio()}"
+            bind:imageUrl="@{obj.imageUrl}"
+            android:scaleType="fitXY"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

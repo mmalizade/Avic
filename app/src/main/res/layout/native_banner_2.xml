@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/corner_radius_1"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/bundle_bg_color"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ir.tapsell.sdk.nativeads.views.RatioImageView
+            android:id="@+id/tapsell_nativead_banner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.50"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            app:aspect_ratio="0.5625"
+            app:aspect_style="fixed_width"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tapsell_nativead_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.06"
+            app:layout_constraintDimensionRatio="@string/ratio_1_1"
+            app:layout_constraintTop_toTopOf="@id/tapsell_nativead_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="fitCenter"
+            android:layout_margin="@dimen/content_padding_0"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tapsell_nativead_description"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toStartOf="@id/tapsell_nativead_logo"
+            app:layout_constraintTop_toTopOf="@id/tapsell_nativead_logo"
+            app:layout_constraintBottom_toBottomOf="@id/tapsell_nativead_logo"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeMaxTextSize="11sp"
+            android:textColor="@color/text_color_4"
+            android:layout_marginStart="@dimen/content_padding_0"
+            android:layout_marginEnd="@dimen/content_padding_0"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/tapsell_nativead_cta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tapsell_nativead_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tapsell_nativead_banner"
+            android:background="@drawable/native_banner_cta_bg_1"
+            android:layout_margin="@dimen/content_padding_0"
+            android:textSize="12sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tapsell_nativead_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tapsell_nativead_logo"
+            app:layout_constraintBottom_toTopOf="@id/tapsell_nativead_cta"
+            app:layout_constraintStart_toEndOf="@id/tapsell_nativead_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/content_padding_0"
+            android:gravity="right|top"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:maxLines="2"
+            android:textColor="@color/text_color_1"
+            android:ellipsize="end"
+            fontPath="@string/default_font_bold"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

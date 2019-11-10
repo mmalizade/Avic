@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.newspaper.model.NewsCategoryModel"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/corner_radius_1"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/md_white"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="@string/ratio_4_3"
+                android:scaleType="centerCrop"
+                bind:imageUrl="@{obj.imageUrl}"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv"
+                app:layout_constraintBottom_toBottomOf="@id/iv"
+                android:background="@color/img_foreground_tint"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.50"
+                app:layout_constraintHeight_percent="0.24"
+                app:layout_constraintTop_toTopOf="@id/iv"
+                app:layout_constraintBottom_toBottomOf="@id/iv"
+                app:layout_constraintStart_toStartOf="@id/iv"
+                app:layout_constraintEnd_toEndOf="@id/iv"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="32sp"
+                app:autoSizeMinTextSize="8sp"
+                android:text="@{obj.title}"
+                android:textColor="@color/md_white"
+                android:shadowColor="@color/colorAccent"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="12"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

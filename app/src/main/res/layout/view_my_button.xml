@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frame2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/my_btn_secondary_view_padding_right_left_def"
+        android:paddingLeft="@dimen/my_btn_secondary_view_padding_right_left_def"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/my_btn_text_size_default"
+            android:textColor="@color/my_btn_text_color_default"
+            android:clickable="false"
+            android:focusable="false"
+            android:lines="1" android:maxLines="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon_view"
+            android:layout_width="@dimen/my_btn_icon_size_default"
+            android:layout_height="@dimen/my_btn_icon_size_default"
+            android:layout_gravity="center"
+            android:tint="@color/md_white"
+            android:scaleType="fitXY"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/frame2"
+        android:paddingTop="@dimen/my_btn_padding_top_bottom_default"
+        android:paddingBottom="@dimen/my_btn_padding_top_bottom_default">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/my_btn_text_size_default"
+            android:textColor="@color/my_btn_text_color_default"
+            android:clickable="false"
+            android:focusable="false"
+            android:lines="1" android:maxLines="1"
+            fontPath="@string/default_font_bold"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_view"
+            android:layout_width="@dimen/my_btn_progress_view_size_default"
+            android:layout_height="@dimen/my_btn_progress_view_size_default"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="invisible"
+            android:indeterminate="true"
+            />
+
+    </FrameLayout>
+
+</merge>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/md_white</color>
+    <color name="colorPrimaryLight">@color/md_grey100</color>
+    <color name="colorPrimaryDark">@color/md_grey300</color>
+    <color name="colorAccent">@color/md_blue800</color>
+    <color name="colorAccentDark">@color/md_indigo800</color>
+    <color name="colorWindowBackground">@color/md_grey200</color>
+    <color name="colorWindowBackgroundAlpha">@color/md_grey100</color>
+    <color name="colorStatusBar">@color/md_grey300</color>
+
+    <color name="text_color_1">@color/md_black</color>
+    <color name="text_color_2">@color/md_grey900</color>
+    <color name="text_color_3">@color/md_grey700</color>
+    <color name="text_color_4">@color/md_grey500</color>
+    <color name="text_color_5">@color/md_grey400</color>
+    <color name="text_color_6">@color/md_grey300</color>
+    <color name="text_color_7">@color/md_grey100</color>
+    <color name="text_color_8">@color/md_white</color>
+
+    <color name="img_foreground_tint">#34000000</color>
+
+    <color name="bundle_bg_color">@color/md_white</color>
+    <color name="bundle_bg_selected_color">#cacaca</color>
+    <color name="bundle_bg2_color">@color/md_grey200</color>
+    <color name="bundle_bg2_selected_color">@color/md_grey300</color>
+
+
+    <color name="bottom_bar_bg">@color/md_white</color>
+    <color name="toolbar_scrim_bg">@color/md_white</color>
+
+    <color name="main_bg">@color/colorWindowBackground</color>
+    <color name="main_bg_alpha">@color/colorWindowBackgroundAlpha</color>
+
+
+
+    <color name="bg1_start_color">#9e0ab4</color>
+    <color name="bg1_end_color">#d91a9c</color>
+
+    <color name="music_list_item_1_bg">#2a2d47</color>
+    <color name="show_more_bg_color_1">@color/md_white</color>
+    <color name="show_more_text_color_1">#750064</color>
+    <color name="bundle_bg1_start_color">#8a119d</color>
+    <color name="bundle_bg1_end_color">#bc1688</color>
+    <color name="search_text_color">@color/md_black</color>
+    <color name="search_hint_color">@color/text_color_4</color>
+    <color name="bundle_bg3_color">#1d202f</color>
+    <color name="bundle_bg4_color">#22263a</color>
+
+    <color name="search_bg_color">@color/text_color_6</color>
+
+    <color name="news_tag_text_color">@color/colorAccentDark</color>
+    <color name="loading_1_progress_start_color">@color/text_color_2</color>
+    <color name="loading_1_progress_end_color">@color/text_color_7</color>
+
+    <color name="league_top_headre_list_item_text_bg">#77616161</color>
+    <color name="match_list_item_bg_color">@color/bundle_bg_color</color>
+    <color name="match_info_view_prediction_bg_color">@color/md_grey900</color>
+    <color name="match_info_view_prediction_bg_stroke_color">@color/md_grey200</color>
+    <color name="team_name">@color/md_grey700</color>
+    <color name="view_match_info_real_score_text_color">@color/md_white</color>
+    <color name="view_match_info_prediction_text_color">@color/md_grey400</color>
+
+    <color name="league_period_match_header_text_color">@color/md_grey700</color>
+    <color name="sticky_header_bg_color">@color/md_grey200</color>
+    <color name="sticky_header_text_color">@color/colorAccentDark</color>
+
+    <color name="standing_table_header_bg_color">@color/main_bg</color>
+    <color name="standing_table_header_text_color">@color/text_color_3</color>
+    <color name="standing_table_row_bg_color">@color/text_color_7</color>
+    <color name="standing_table_row_text_color">@color/text_color_1</color>
+
+    <color name="tab_1_text_selected">@color/md_black</color>
+    <color name="tab_1_text_normal">@color/md_grey800</color>
+    <color name="tab_1_bg_color">@android:color/transparent</color>
+    <color name="tab_1_indicator">@color/md_black</color>
+    <color name="course_page_card_bg_color">@color/bundle_bg_color</color>
+
+</resources>

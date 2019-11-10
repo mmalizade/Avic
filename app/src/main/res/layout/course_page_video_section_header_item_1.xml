@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/bundle_bg_color"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="@dimen/corner_radius_4"
+    >
+
+
+    <View
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="end|center_vertical"
+        android:background="@drawable/circle_bg_blue"
+        android:layout_marginEnd="@dimen/content_padding_4"
+        android:layout_marginRight="@dimen/content_padding_4"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_1"
+        android:paddingTop="@dimen/content_padding_3"
+        android:paddingBottom="@dimen/content_padding_3"
+        android:paddingStart="@dimen/content_padding_4"
+        android:paddingEnd="@dimen/content_padding_4"
+        android:layout_marginStart="@dimen/content_padding_4"
+        android:layout_marginEnd="@dimen/content_padding_4"
+        android:gravity="right|center_vertical"
+        android:textSize="14sp"
+        android:text="@string/this_course_sessions"
+        fontPath="@string/default_font_bold"
+        />
+
+
+</androidx.cardview.widget.CardView>

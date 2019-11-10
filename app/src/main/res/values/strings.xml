@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">سرگرمی</string>
+
+    <string name="default_font">fonts/IranSans.ttf</string>
+    <string name="default_font_bold">fonts/IranSans-Bold.ttf</string>
+    <string name="default_font_light">fonts/IranSans.ttf</string>
+
+
+    <string name="font_yekan">fonts/IranYekan.ttf</string>
+    <string name="font_yekan_bold">fonts/IranYekan-Bold.ttf</string>
+
+    <string name="suggested_news">اخبار پیشنهادی</string>
+    <string name="ad">آگهی</string>
+    <string name="back">بازگشت</string>
+    <string name="news">اخبار</string>
+    <string name="week_s">هفته %1$s</string>
+    <string name="match_time_format">%1$s ساعت %2$s</string>
+    <string name="emtiaz">امتیاز</string>
+    <string name="tafazol">تفاضل</string>
+    <string name="bakht">باخت</string>
+    <string name="mosavi">مساوی</string>
+    <string name="bord">برد</string>
+    <string name="bazi">بازی</string>
+    <string name="team">تیم</string>
+    <string name="dash">-</string>
+    <string name="rank_in_standing">رتبه جدول</string>
+    <string name="last_3_games">سه بازی آخر</string>
+    <string name="submit_prediction">ثبت پیش‌بینی</string>
+    <string name="edit_prediction">ویرایش پیش‌بینی</string>
+    <string name="donyaye_animation">دنیای انیمیشن</string>
+    <string name="watch_this">تماشا کنید</string>
+    <string name="ratio_11_16">H, 11:16</string>
+    <string name="play_film">پخش فیلم</string>
+    <string name="related_cartoons">کارتون‌های مرتبط</string>
+    <string name="video_count">تعداد ویدئو‌ها</string>
+    <string name="course_duration">زمان دوره</string>
+    <string name="from_x_vote">از %1$d رای</string>
+    <string name="this_course_sessions">جلسات این دوره</string>
+    <string name="buy_voucher">خرید اشتراک</string>
+    <string name="course_information">توضیحات تکمیلی</string>
+
+    <string-array name="number_to_word">
+        <item>اول</item>
+        <item>دوم</item>
+        <item>سوم</item>
+        <item>چهارم</item>
+        <item>پنجم</item>
+        <item>ششم</item>
+        <item>هفتم</item>
+        <item>هشتم</item>
+        <item>نهم</item>
+        <item>دهم</item>
+        <item>یازدهم</item>
+        <item>دوازدهم</item>
+        <item>سیزدهم</item>
+        <item>چهاردهم</item>
+        <item>پانزدهم</item>
+        <item>شانزدهم</item>
+        <item>هفدهم</item>
+        <item>هجدهم</item>
+        <item>نوزدهم</item>
+        <item>بیستم</item>
+        <item>بیست‌و‌یکم</item>
+        <item>بیست‌و‌دوم</item>
+        <item>بیست‌و‌سوم</item>
+        <item>بیست‌و‌چهارم</item>
+        <item>بیست‌و‌پنجم</item>
+        <item>بیست‌و‌ششم</item>
+        <item>بیست‌و‌هفتم</item>
+        <item>بیست‌و‌هشتم</item>
+        <item>بیست‌و‌نهم</item>
+        <item>سی‌ام</item>
+        <item>سی‌و‌یکم</item>
+        <item>سی‌و‌دوم</item>
+        <item>سی‌و‌سوم</item>
+        <item>سی‌و‌چهارم</item>
+        <item>سی‌و‌پنجم</item>
+        <item>سی‌و‌ششم</item>
+        <item>سی‌و‌هفتم</item>
+        <item>سی‌و‌هشتم</item>
+        <item>سی‌و‌نهم</item>
+        <item>چهلم</item>
+    </string-array>
+
+    <string-array name="prediction_numbers">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>

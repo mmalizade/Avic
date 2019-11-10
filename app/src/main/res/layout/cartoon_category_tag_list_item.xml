@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.cartoon.model.CategoryModel"/>
+    </data>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:lines="1" android:maxLines="1"
+        android:gravity="center"
+        android:textColor="@color/md_grey100"
+        android:background="@drawable/cartoon_category_tag_list_bg"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="@dimen/content_padding_1"
+        android:paddingEnd="@dimen/content_padding_1"
+        android:text="@{obj.title}"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="13sp"
+        app:autoSizeMinTextSize="8sp"
+        />
+
+</layout>
+

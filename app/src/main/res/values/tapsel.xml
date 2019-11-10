@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tapsell_zone_id_rewarded_video">5da2653cfe0bd200013eba38</string>
+    <string name="tapsell_zone_id_standard_banner">5da2653cfe0bd200013eba3a</string>
+    <string name="tapsell_zone_id_native_banner">5da2653cfe0bd200013eba37</string>
+    <string name="tapsell_zone_id_native_video">5da2653cfe0bd200013eba3b</string>
+    <string name="tapsell_zone_id_intrestitial_banner">5da2653cfe0bd200013eba36</string>
+    <string name="tapsell_zone_id_intrestitial_video">5da2653cfe0bd200013eba39</string>
+</resources>

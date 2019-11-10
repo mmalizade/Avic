@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.academy.model.VideoModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/content_padding_1"
+            android:layout_marginBottom="@dimen/content_padding_1"
+            app:cardBackgroundColor="@color/course_page_card_bg_color"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/corner_radius_4"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_3"
+                    android:paddingStart="@dimen/content_padding_4"
+                    android:paddingEnd="@dimen/content_padding_4"
+                    android:gravity="left|center_vertical"
+                    android:textSize="12sp"
+                    bind:mediaDuration="@{obj.duration}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_4"
+                    android:paddingTop="@dimen/content_padding_3"
+                    android:paddingBottom="@dimen/content_padding_3"
+                    android:paddingStart="@dimen/content_padding_4"
+                    android:paddingEnd="@dimen/content_padding_4"
+                    android:layout_marginStart="@dimen/content_padding_4"
+                    android:layout_marginEnd="@dimen/content_padding_4"
+                    android:gravity="right|center_vertical"
+                    android:textSize="12sp"
+                    android:text="@{obj.title}"
+                    />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.01"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/text_color_6"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintDimensionRatio="@string/ratio_1_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card"
+            android:textColor="@color/md_white"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="13sp"
+            app:autoSizeMinTextSize="6sp"
+            android:padding="4dp"
+            android:gravity="center"
+            android:lines="1" android:maxLines="1"
+            android:background="@drawable/circle_bg_blue_2"
+            android:text="@{String.valueOf(obj.position)}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.football.model.MatchModel"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/corner_radius_1"
+        app:cardBackgroundColor="@color/bundle_bg_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/content_padding_1">
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1" android:maxLines="1"
+                    android:textColor="@color/text_color_2"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="@{obj.time}"
+                    fontPath="@string/default_font_bold"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1" android:maxLines="1"
+                    android:textColor="@color/text_color_2"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="@string/dash"
+                    android:paddingStart="@dimen/content_padding_0"
+                    android:paddingEnd="@dimen/content_padding_0"
+                    fontPath="@string/default_font_bold"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1" android:maxLines="1"
+                    android:textColor="@color/text_color_2"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="@{obj.jalaliDate}"
+                    fontPath="@string/default_font_bold"
+                    />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/row1"
+                android:layout_marginTop="@dimen/content_padding_2"
+                >
+
+                <Space
+                    android:id="@+id/space0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/content_padding_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_guest_team_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintDimensionRatio="@string/ratio_1_1_w"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/npicker_guest_score"
+                    app:layout_constraintBottom_toTopOf="@id/space0"
+                    android:layout_marginStart="@dimen/content_padding_0"
+                    android:layout_marginEnd="@dimen/content_padding_0"
+                    bind:imageUrl="@{obj.guestTeam.logo ?? null}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_host_team_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintDimensionRatio="@string/ratio_1_1_w"
+                    app:layout_constraintStart_toEndOf="@id/npicker_host_score"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/space0"
+                    android:layout_marginStart="@dimen/content_padding_0"
+                    android:layout_marginEnd="@dimen/content_padding_0"
+                    bind:imageUrl="@{obj.hostTeam.logo ?? null}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_guest_team_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent="0.22"
+                    android:text="@{obj.guestTeam.title ?? null}"
+                    app:layout_constraintTop_toBottomOf="@id/space0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/npicker_guest_score"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="17sp"
+                    app:autoSizeMinTextSize="12sp"
+                    android:lines="1" android:maxLines="1"
+                    android:textColor="@color/text_color_1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_host_team_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent="0.22"
+                    android:text="@{obj.hostTeam.title ?? null}"
+                    app:layout_constraintTop_toBottomOf="@id/space0"
+                    app:layout_constraintStart_toEndOf="@id/npicker_host_score"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="17sp"
+                    app:autoSizeMinTextSize="12sp"
+                    android:lines="1" android:maxLines="1"
+                    android:textColor="@color/text_color_1"
+                    />
+
+                <Space
+                    android:id="@+id/space1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    app:layout_constraintWidth_percent="0.42"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                    android:id="@+id/npicker_guest_score"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_percent="0.20"
+                    app:layout_constraintStart_toStartOf="@id/space1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/npv_style_1"
+                    bind:npvValue="@{obj.prediction.guestScore ?? 0}"
+                    />
+
+                <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                    android:id="@+id/npicker_host_score"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_percent="0.20"
+                    app:layout_constraintEnd_toEndOf="@id/space1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/npv_style_1"
+                    bind:npvValue="@{obj.prediction.hostScore ?? 0}"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/row2"
+                android:layout_marginTop="@dimen/content_padding_2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/content_padding_1"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:gravity="right|center_vertical"
+                    android:lines="1" android:maxLines="1"
+                    android:text="@{String.valueOf(obj.guestTeam == null ? 0 : obj.guestTeam.rank)}"
+                    />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="40"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/content_padding_1"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:gravity="center"
+                    android:lines="1" android:maxLines="1"
+                    android:text="@string/rank_in_standing"
+                    />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/content_padding_1"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:gravity="left|center_vertical"
+                    android:lines="1" android:maxLines="1"
+                    android:text="@{String.valueOf(obj.hostTeam == null ? 0 : obj.hostTeam.rank)}"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintWidth_percent="0.80"
+                android:background="@color/text_color_6"
+                app:layout_constraintTop_toBottomOf="@id/row3"
+                android:layout_marginTop="@dimen/content_padding_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_1"
+                android:layout_marginTop="@dimen/content_padding_1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/content_padding_1"
+                    android:gravity="center"
+                    bind:teamForm="@{obj.guestTeam.form ?? null}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/content_padding_1"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:gravity="center"
+                    android:lines="1" android:maxLines="1"
+                    android:text="@string/last_3_games"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/content_padding_1"
+                    android:gravity="center"
+                    bind:teamForm="@{obj.hostTeam.form ?? null}"
+                    />
+
+            </LinearLayout>
+
+            <ir.moovic.entertainment.ui.helper.MyButton
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.80"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/content_padding_2"
+                style="@style/my_button_0"
+                app:mb_bgColor="@{(obj.prediction == null) ? (@color/md_green800) : (@color/md_yellow800)}"
+                app:mb_bgColor_2="@{(obj.prediction == null) ? (@color/md_green700) : (@color/md_yellow700)}"
+                app:mb_text="@{(obj.prediction == null) ? (@string/submit_prediction) : (@string/edit_prediction)}"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</layout>

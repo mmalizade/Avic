@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyButton">
+        <attr name="mb_textColor" format="color"/>
+        <attr name="mb_progressColor" format="color"/>
+        <attr name="mb_textSize" format="dimension"/>
+        <attr name="mb_text" format="string"/>
+        <attr name="mb_text2" format="string"/>
+        <attr name="mb_icon" format="integer"/>
+        <attr name="mb_iconSize" format="dimension"/>
+        <attr name="mb_loadingIndicator" format="string"/>
+        <attr name="mb_progressViewSize" format="dimension"/>
+        <attr name="mb_shadowColor" format="color"/>
+        <attr name="mb_shadowSize" format="dimension"/>
+        <attr name="mb_shadowEnable" format="boolean"/>
+        <attr name="mb_bgColor" format="color"/>
+        <attr name="mb_bgColor_2" format="color"/>
+        <attr name="mb_cornerRadius" format="dimension"/>
+        <attr name="mb_secondaryPaddingRightLeft" format="dimension"/>
+        <attr name="mb_showOutline" format="boolean"/>
+        <attr name="mb_font" format="integer">
+            <flag name="iransans" value="0"/>
+            <flag name="iransans_bold" value="1"/>
+            <flag name="yekan" value="2"/>
+            <flag name="yekan_bold" value="3"/>
+        </attr>
+        <attr name="mb_mode" format="integer">
+            <flag name="single_text" value="0"/>
+            <flag name="double_with_text" value="1"/>
+            <flag name="double_with_icon" value="2"/>
+        </attr>
+        <attr name="mb_colorState" format="integer"/>
+        <attr name="mb_enable" format="boolean"/>
+    </declare-styleable>
+
+    <dimen name="my_btn_text_size_default">15sp</dimen>
+    <dimen name="my_btn_shadow_size_default">2dp</dimen>
+    <dimen name="my_btn_icon_size_default">24dp</dimen>
+    <dimen name="my_btn_progress_view_size_default">24dp</dimen>
+    <dimen name="my_btn_corner_radius">4dp</dimen>
+    <dimen name="my_btn_secondary_view_padding_right_left_def">16dp</dimen>
+    <dimen name="my_btn_stroke_width_def">2dp</dimen>
+    <dimen name="my_btn_padding_top_bottom_default">0dp</dimen>
+
+    <color name="my_btn_text_color_default">@color/md_white</color>
+    <color name="my_btn_shadow_color_default">@color/md_orange800</color>
+
+</resources>

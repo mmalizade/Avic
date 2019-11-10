@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "59093202560",
+    "firebase_url": "https://entertainment-moovic.firebaseio.com",
+    "project_id": "entertainment-moovic",
+    "storage_bucket": "entertainment-moovic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59093202560:android:07012ec913064f1ce21865",
+        "android_client_info": {
+          "package_name": "ir.moovic.entertainment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59093202560-jniuouqtctr7556ttqgho89f9pnqb3is.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGekG4hfLHwkQDBDlEeR9uSJK91GRr2pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59093202560-jniuouqtctr7556ttqgho89f9pnqb3is.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

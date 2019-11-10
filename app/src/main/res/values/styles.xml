@@ -1,0 +1,172 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorStatusBar</item>
+    </style>
+
+    <!--<item name="android:windowAnimationStyle">@style/activity_animation</item>-->
+
+        <!--<item name="android:windowFullscreen">true</item>-->
+    <!--<item name="android:colorControlActivated">@color/colorPrimary</item>-->
+    <!--<item name="android:colorControlNormal">#50bbbbbb</item>-->
+
+    <style name="NoActionBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    </style>
+
+    <style name="activity_animation" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_left_out</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.CustomControlColor" parent="AppTheme.NoActionBar">
+        <item name="colorControlNormal">@color/md_grey300</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="social_btn_style">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:alpha">0.0</item>
+    </style>
+
+    <style name="RatingBarIndicator" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="colorControlNormal">@color/md_yellow500</item>
+        <item name="colorControlActivated">@color/md_red400</item>
+    </style>
+
+    <style name="tab_view_style_1" parent="TextAppearance.Design.Tab">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="fontPath">fonts/IranYekan-Bold.ttf</item>
+    </style>
+
+    <style name="tab_view_style_2" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="fontPath">fonts/IranYekan-Bold.ttf</item>
+    </style>
+
+
+    <style name="input_search_style_1">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/search_text_color</item>
+        <item name="android:textColorHint">@color/search_hint_color</item>
+        <item name="android:background">@drawable/search_input_bg</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:paddingLeft">52dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+
+    <style name="fr_comment_dialog" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/fr_comment_dialog_animation_style</item>
+    </style>
+
+    <style name="fr_comment_dialog_animation_style">
+        <item name="android:windowEnterAnimation">@anim/push_down_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style>
+
+    <style name="app_bar_1">
+        <item name="android:background">@color/bottom_bar_bg</item>
+        <item name="elevation">@dimen/toolbar_elevation</item>
+    </style>
+
+    <style name="npv_style_1">
+        <item name="android:background">@drawable/number_picker_1_bg</item>
+        <item name="npv_DividerColor">@color/text_color_7</item>
+        <item name="npv_DividerHeight">1dp</item>
+        <item name="npv_TextColorNormal">@color/text_color_5</item>
+        <item name="npv_TextColorSelected">@color/text_color_1</item>
+        <item name="npv_TextSizeNormal">16sp</item>
+        <item name="npv_TextSizeSelected">24sp</item>
+        <item name="npv_WrapSelectorWheel">true</item>
+        <item name="npv_TextArray">@array/prediction_numbers</item>
+        <item name="npv_MinValue">0</item>
+        <item name="npv_MaxValue">@integer/prediction_max_value</item>
+    </style>
+
+
+    <style name="my_button_0">
+        <item name="android:paddingTop">@dimen/content_padding_1</item>
+        <item name="android:paddingBottom">@dimen/content_padding_1</item>
+        <item name="mb_textSize">20sp</item>
+        <item name="mb_textColor">@color/md_white</item>
+        <item name="mb_font">iransans_bold</item>
+        <item name="mb_cornerRadius">@dimen/corner_radius_1</item>
+        <item name="android:clickable">true</item>
+        <item name="mb_mode">single_text</item>
+    </style>
+
+    <style name="my_button_1" parent="my_button_0">
+        <item name="mb_colorState">@drawable/my_button_1_selector</item>
+    </style>
+
+    <style name="my_button_2" parent="my_button_0">
+        <item name="mb_colorState">@drawable/my_button_2_selector</item>
+    </style>
+    <style name="my_button_3" parent="my_button_0">
+        <item name="mb_colorState">@drawable/my_button_3_selector</item>
+    </style>
+    <style name="my_button_4" parent="my_button_0">
+        <item name="mb_colorState">@drawable/my_button_4_selector</item>
+    </style>
+    <style name="my_button_5" parent="my_button_0">
+        <item name="mb_colorState">@drawable/my_button_5_selector</item>
+    </style>
+
+    <style name="course_page_card_style">
+        <item name="android:padding">@dimen/course_page_card_padding</item>
+        <item name="elevation">0dp</item>
+        <item name="android:layout_marginTop">@dimen/course_page_card_padding</item>
+        <item name="android:background">@drawable/course_page_card_bg</item>
+    </style>
+
+
+</resources>

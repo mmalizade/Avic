@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="myiv">
+        <attr name="myiv_ratioW" format="integer"/>
+        <attr name="myiv_ratioH" format="integer"/>
+        <attr name="myiv_byW" format="boolean"/>
+        <attr name="myiv_centerCrop" format="boolean"/>
+    </declare-styleable>
+
+</resources>

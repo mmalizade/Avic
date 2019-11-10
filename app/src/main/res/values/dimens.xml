@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="corner_radius_0">4dp</dimen>
+    <dimen name="corner_radius_1">8dp</dimen>
+    <dimen name="corner_radius_2">12dp</dimen>
+    <dimen name="corner_radius_3">16dp</dimen>
+    <dimen name="corner_radius_3_2">18dp</dimen>
+    <dimen name="corner_radius_4">20dp</dimen>
+
+    <dimen name="space_0">4dp</dimen>
+    <dimen name="space_1">8dp</dimen>
+    <dimen name="space_2">12dp</dimen>
+    <dimen name="space_3">16dp</dimen>
+    <dimen name="space_4">20dp</dimen>
+
+    <dimen name="content_padding_0">4dp</dimen>
+    <dimen name="content_padding_1">8dp</dimen>
+    <dimen name="content_padding_2">12dp</dimen>
+    <dimen name="content_padding_3">16dp</dimen>
+    <dimen name="content_padding_4">20dp</dimen>
+    <dimen name="content_padding_8">36dp</dimen>
+
+    <dimen name="loading_1_progress_size">48dp</dimen>
+    <dimen name="list_item_media_type_icon_size">32dp</dimen>
+    <dimen name="toolbar_padding_rl">12dp</dimen>
+    <dimen name="toolbar_elevation">12dp</dimen>
+    <dimen name="list_item_1_elevation">3dp</dimen>
+
+    <dimen name="match_info_view_padding">12dp</dimen>
+    <dimen name="team_view_height">44dp</dimen>
+    <dimen name="view_match_info_real_score_size">32dp</dimen>
+    <dimen name="view_match_info_prediction_score_size">22dp</dimen>
+    <dimen name="view_match_info_rel_score_margin">6dp</dimen>
+    <dimen name="view_match_info_game_time_height">22dp</dimen>
+    <dimen name="match_info_view_predication_bg_corner">4dp</dimen>
+    <dimen name="match_info_view_predication_padding_tb">8dp</dimen>
+    <dimen name="match_info_view_predication_padding_rl">4dp</dimen>
+    <dimen name="view_match_info_prediction_width">75dp</dimen>
+    <dimen name="view_match_info_score_margin_top">16dp</dimen>
+    <dimen name="view_match_info_score_padding_rl">12dp</dimen>
+    <dimen name="view_match_info_score_padding_tb">7dp</dimen>
+    <dimen name="view_match_info_prediction_padding_rl">2dp</dimen>
+    <dimen name="view_match_info_prediction_padding_tb">2dp</dimen>
+    <dimen name="view_match_info_prediction_margin_rl">12dp</dimen>
+    <dimen name="view_match_info_prediction_height">20dp</dimen>
+    <dimen name="view_match_info_team_width">90dp</dimen>
+    <dimen name="week_matches_spacing">18dp</dimen>
+    <dimen name="match_list_item_elevation">0dp</dimen>
+    <dimen name="view_match_info_corner_radius">8dp</dimen>
+    <dimen name="team_logo_margin">4dp</dimen>
+    <dimen name="team_name_margin">38dp</dimen>
+    <dimen name="team_logo_size">28dp</dimen>
+    <dimen name="real_score_size">36dp</dimen>
+    <dimen name="real_score_margin">2dp</dimen>
+    <dimen name="real_score_padding">3dp</dimen>
+    <dimen name="real_score_text_size">15sp</dimen>
+    <dimen name="predict_score_size">32dp</dimen>
+    <dimen name="predict_score_padding">2dp</dimen>
+    <dimen name="predict_score_text_size">14sp</dimen>
+    <dimen name="match_prediction_info_height">90dp</dimen>
+
+    <dimen name="standing_table_row_padding_top">8dp</dimen>
+    <dimen name="standing_table_row_padding_right">4dp</dimen>
+    <dimen name="tab_1_height">44dp</dimen>
+    <dimen name="prediction_card_base_elevation">4dp</dimen>
+    <dimen name="prediction_card_raising_elevation">10dp</dimen>
+
+    <dimen name="cartoon_product_listitem_1_cover_width">130dp</dimen>
+    <dimen name="cartoon_product_listitem_2_cover_width">180dp</dimen>
+    <dimen name="course_page_card_padding">@dimen/content_padding_1</dimen>
+    <dimen name="course_page_card_corner_radius">@dimen/corner_radius_1</dimen>
+    <dimen name="course_page_info_icon_size">24dp</dimen>
+    <dimen name="loading_2_progress_size">32dp</dimen>
+</resources>

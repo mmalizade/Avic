@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/tools"
+    >
+
+    <data >
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="presenter"
+            type="ir.moovic.entertainment.app.academy.presenter.CoursePagePresenter"/>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.academy.model.CourseModel"/>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/course_page_card_padding"
+                android:paddingRight="@dimen/course_page_card_padding"
+                android:paddingLeft="@dimen/course_page_card_padding">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/row1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/course_page_card_bg_color"
+                    app:cardCornerRadius="@dimen/course_page_card_corner_radius">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ir.moovic.entertainment.ui.helper.MyImageView
+                        android:id="@+id/iv_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:myiv_ratioW="16"
+                        app:myiv_ratioH="9"
+                        app:layout_constraintDimensionRatio="@string/ratio_16_9"
+                        bind:imageUrl="@{TextUtils.isEmpty(obj.banner) ? obj.cover : obj.banner}"
+                        />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/content_padding_2"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="end"
+                            fontPath="@string/default_font_bold"
+                            android:text="@{obj.name}"
+                            />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:id="@+id/divider_1"
+                    android:layout_width="@dimen/course_page_card_padding"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/row2_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/divider_1"
+                    app:layout_constraintTop_toBottomOf="@id/row1"
+                    android:layout_marginTop="@dimen/course_page_card_padding"
+                    style="@style/course_page_card_style"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/course_page_info_icon_size"
+                        android:layout_height="@dimen/course_page_info_icon_size"
+                        android:layout_gravity="center_horizontal"
+                        app:srcCompat="@drawable/ic_bullet_list"
+                        app:tint="@color/text_color_5"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_5"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:text="@string/video_count"
+                        android:layout_marginTop="@dimen/content_padding_0"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_1"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:text="@{String.valueOf(obj.videoCount)}"
+                        android:layout_marginTop="@dimen/content_padding_0"
+                        fontPath="@string/default_font_bold"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row2_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@id/divider_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/row1"
+                    android:layout_marginTop="@dimen/course_page_card_padding"
+                    style="@style/course_page_card_style"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/course_page_info_icon_size"
+                        android:layout_height="@dimen/course_page_info_icon_size"
+                        android:layout_gravity="center_horizontal"
+                        app:srcCompat="@drawable/ic_clock_circular_outline"
+                        app:tint="@color/text_color_5"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_5"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:text="@string/course_duration"
+                        android:layout_marginTop="@dimen/content_padding_0"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_1"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        bind:mediaDuration="@{obj.duration}"
+                        android:layout_marginTop="@dimen/content_padding_0"
+                        fontPath="@string/default_font_bold"
+                        />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/row3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/course_page_card_style"
+                    app:layout_constraintTop_toBottomOf="@id/row2_1"
+                    >
+
+                    <Space
+                        android:id="@+id/divider_2"
+                        android:layout_width="@dimen/course_page_card_padding"
+                        android:layout_height="1dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <com.willy.ratingbar.ScaleRatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/divider_2"
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        app:srb_numStars="5"
+                        app:srb_minimumStars="0"
+                        app:srb_rating="@{obj.rate.average}"
+                        app:srb_starWidth="20dp"
+                        app:srb_starHeight="20dp"
+                        app:srb_starPadding="2dp"
+                        app:srb_stepSize="0.5"
+                        app:srb_isIndicator="true"
+                        app:srb_clearRatingEnabled="true"
+                        android:gravity="center"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/divider_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1" android:maxLines="1"
+                            android:textColor="@color/text_color_4"
+                            android:text="@{@string/from_x_vote(obj.rate.count)}"
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1" android:maxLines="1"
+                            android:textColor="@color/text_color_1"
+                            android:text="@{String.valueOf(obj.rate.average).replace('.', '/')}"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            fontPath="@string/default_font_bold"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/row4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/row3"
+                    android:background="@android:color/transparent"
+                    >
+
+                    <ir.moovic.entertainment.ui.helper.MyButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/my_button_4"
+                        app:mb_text="@string/buy_voucher"
+                        android:layout_marginTop="@dimen/content_padding_1"
+                        app:mb_mode="double_with_icon"
+                        app:mb_icon="@drawable/ic_coupon_1"
+                        android:onClickListener="@{(v) -> presenter.payment(v)}"
+                        bind:visible="@{!obj.bought &amp;&amp; obj.videoCount > 0}"
+                        />
+
+                    <ir.moovic.entertainment.ui.helper.MyButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/my_button_5"
+                        app:mb_text="@string/course_information"
+                        android:layout_marginTop="@dimen/content_padding_1"
+                        app:mb_mode="double_with_icon"
+                        app:mb_icon="@drawable/ic_info_1"
+                        android:onClickListener="@{(v) -> presenter.showInformation(v)}"
+                        bind:visible="@{!TextUtils.isEmpty(obj.description)}"
+                        />
+
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/row4"
+                    android:layout_marginTop="@dimen/content_padding_1"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/instructor_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/course_page_card_style"
+                    app:layout_constraintTop_toBottomOf="@id/rv"
+                    android:padding="@dimen/content_padding_3"
+                    android:layout_marginTop="0dp"
+                    bind:visible="@{obj.instructor != null}"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_instructor_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintWidth_percent="0.14"
+                        app:layout_constraintDimensionRatio="@string/ratio_1_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        bind:imageUrlCircleCrop="@{obj.instructor == null ? null : obj.instructor.profile}"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="@id/iv_instructor_profile"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_instructor_profile"
+                        app:layout_constraintEnd_toStartOf="@id/iv_instructor_profile"
+                        android:paddingStart="@dimen/content_padding_2"
+                        android:paddingEnd="@dimen/content_padding_2"
+                        android:paddingTop="@dimen/content_padding_0"
+                        android:paddingBottom="@dimen/content_padding_0"
+                        android:text="@{obj.instructor == null ? null : obj.instructor.name}"
+                        android:gravity="right|center_vertical"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="8sp"
+                        android:textColor="@color/text_color_2"
+                        fontPath="@string/default_font_bold"
+                        />
+
+                    <ir.moovic.entertainment.ui.helper.TextViewEx
+                        android:id="@+id/tv_instructor_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/iv_instructor_profile"
+                        android:paddingStart="@dimen/content_padding_2"
+                        android:paddingEnd="@dimen/content_padding_2"
+                        android:paddingTop="@dimen/content_padding_0"
+                        android:paddingBottom="@dimen/content_padding_0"
+                        android:text="@{obj.instructor == null ? null : obj.instructor.bio}"
+                        android:gravity="right|top"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_color_4"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_instructor_bio"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/loading_pb"
+                    android:layout_width="@dimen/loading_1_progress_size"
+                    android:layout_height="@dimen/loading_1_progress_size"
+                    app:layout_constraintTop_toBottomOf="@id/row4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/content_padding_4"
+                    style="@style/AVLoadingIndicatorView"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/text_color_5"
+                    app:indicatorName="BallScaleIndicator"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            style="@style/app_bar_1">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/toolbar1"
+                         android:id="@+id/toolbar"
+                         />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

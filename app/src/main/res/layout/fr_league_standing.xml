@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/standing_table_header_bg_color"
+            android:paddingTop="@dimen/standing_table_row_padding_top"
+            android:paddingBottom="@dimen/standing_table_row_padding_top"
+            android:paddingStart="@dimen/standing_table_row_padding_right"
+            android:paddingEnd="@dimen/standing_table_row_padding_right"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/emtiaz"
+                android:lines="1" android:maxLines="1"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/tafazol"
+                android:lines="1" android:maxLines="1"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/bakht"
+                android:lines="1" android:maxLines="1"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/mosavi"
+                android:lines="1" android:maxLines="1"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/bord"
+                android:lines="1" android:maxLines="1"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/bazi"
+                android:lines="1" android:maxLines="1"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="@string/team"
+                android:lines="1" android:maxLines="1"
+                android:gravity="right|center_vertical"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="13sp"
+                android:ellipsize="end"
+                android:textColor="@color/standing_table_header_text_color"
+                />
+
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layoutAnimation="@anim/layout_anim_2"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/loading_layout_1" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

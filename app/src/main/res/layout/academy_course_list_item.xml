@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.academy.model.CourseModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="@string/ratio_16_9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/corner_radius_0"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="1dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                bind:imageUrl="@{obj.cover}"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{obj.name}"
+            android:gravity="right|top"
+            app:layout_constraintTop_toBottomOf="@id/cover"
+            android:padding="2dp"
+            android:layout_marginTop="@dimen/content_padding_0"
+            app:autoSizeTextType="uniform"
+            android:textSize="13sp"
+            android:textColor="@color/text_color_2"
+            fontPath="@string/default_font_bold"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

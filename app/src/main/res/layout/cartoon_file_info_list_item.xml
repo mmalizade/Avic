@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.cartoon.model.CartoonFileInfo"/>
+        <import type="android.text.TextUtils"/>
+
+    </data>
+
+    <ir.moovic.entertainment.ui.helper.MyButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/my_button_3"
+        android:padding="@dimen/content_padding_2"
+        app:mb_textSize="15sp"
+        app:mb_mode="double_with_icon"
+        app:mb_icon="@drawable/ic_play_1"
+        app:mb_text="@{obj.name}"
+        app:mb_cornerRadius="@dimen/corner_radius_2"
+        />
+
+</layout>

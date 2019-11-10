@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.football.model.MatchModel"/>
+    </data>
+
+    <ir.moovic.entertainment.app.football.ui.MatchInfoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/match_info_view"
+        bind:matchModel="@{obj}">
+
+    </ir.moovic.entertainment.app.football.ui.MatchInfoView>
+
+
+</layout>

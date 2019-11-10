@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="time_suffix">
+        <item> سال قبل</item>
+        <item> ماه قبل</item>
+        <item> هفته قبل</item>
+        <item> روز قبل</item>
+        <item> ساعت قبل</item>
+        <item> دقیقه قبل</item>
+        <item>چند لحظه قبل</item>
+        <item>دیروز</item>
+        <item>پریروز</item>
+    </string-array>
+</resources>

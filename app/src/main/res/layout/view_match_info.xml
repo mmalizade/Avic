@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/match_info_view_padding"
+    app:cardBackgroundColor="@color/match_list_item_bg_color"
+    app:cardElevation="@dimen/match_list_item_elevation"
+    app:cardCornerRadius="@dimen/view_match_info_corner_radius"
+    >
+
+    <ir.moovic.entertainment.app.football.ui.TeamInfoView
+        android:id="@+id/team_info_host"
+        android:layout_width="@dimen/view_match_info_team_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        />
+
+    <ir.moovic.entertainment.app.football.ui.TeamInfoView
+        android:id="@+id/team_info_guest"
+        android:layout_width="@dimen/view_match_info_team_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        />
+
+    <FrameLayout
+        android:layout_width="@dimen/view_match_info_prediction_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_real_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/view_match_info_score_bg"
+            android:textColor="@color/view_match_info_real_score_text_color"
+            android:paddingRight="@dimen/view_match_info_score_padding_rl"
+            android:paddingLeft="@dimen/view_match_info_score_padding_rl"
+            android:paddingTop="@dimen/view_match_info_score_padding_tb"
+            android:paddingBottom="@dimen/view_match_info_score_padding_tb"
+            android:layout_marginTop="@dimen/view_match_info_score_margin_top"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeMinTextSize="11sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_prediction_score"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_match_info_prediction_height"
+            android:gravity="center"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginRight="@dimen/view_match_info_prediction_margin_rl"
+            android:layout_marginLeft="@dimen/view_match_info_prediction_margin_rl"
+            android:background="@drawable/match_info_view_prediction_bg"
+            android:textColor="@color/view_match_info_prediction_text_color"
+            android:paddingRight="@dimen/view_match_info_prediction_padding_rl"
+            android:paddingLeft="@dimen/view_match_info_prediction_padding_rl"
+            android:paddingTop="@dimen/view_match_info_prediction_padding_tb"
+            android:paddingBottom="@dimen/view_match_info_prediction_padding_tb"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="13sp"
+            app:autoSizeMinTextSize="9sp"
+            />
+
+    </FrameLayout>
+
+</merge>

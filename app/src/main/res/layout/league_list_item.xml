@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.football.model.LeagueModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/top"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/corner_radius_4"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/bundle_bg_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintDimensionRatio="@string/ratio_16_9"
+                    android:scaleType="centerCrop"
+                    bind:imageUrl="@{obj.cover}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintWidth_percent="0.35"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/content_padding_2"
+                    android:gravity="right|center_vertical"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="13sp"
+                    app:autoSizeMaxTextSize="17sp"
+                    android:lines="1" android:maxLines="1"
+                    android:textColor="@color/md_white"
+                    fontPath="@string/default_font_bold"
+                    android:text="@{obj.title}"
+                    android:shadowColor="@color/md_black"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="12"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.90"
+            app:layout_constraintTop_toBottomOf="@id/top"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prediction2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.495"
+                app:layout_constraintDimensionRatio="@string/ratio_21_9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="@dimen/corner_radius_2"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginTop="@dimen/content_padding_1"
+                app:cardElevation="1dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:tag="1"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    bind:imageUrl="@{obj.covers.prediction2}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_prediction"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.495"
+                app:layout_constraintDimensionRatio="@string/ratio_21_9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="@dimen/corner_radius_2"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginTop="@dimen/content_padding_1"
+                app:cardElevation="1dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:tag="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    bind:imageUrl="@{obj.covers.prediction}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_standing"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.495"
+                app:layout_constraintDimensionRatio="@string/ratio_21_9"
+                app:layout_constraintStart_toStartOf="@id/card_prediction2"
+                app:layout_constraintTop_toBottomOf="@id/card_prediction2"
+                app:cardCornerRadius="@dimen/corner_radius_2"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginTop="@dimen/content_padding_1"
+                app:cardElevation="1dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:tag="0">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    bind:imageUrl="@{obj.covers.standing}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_ranking"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.495"
+                app:layout_constraintDimensionRatio="@string/ratio_21_9"
+                app:layout_constraintEnd_toEndOf="@id/card_prediction"
+                app:layout_constraintTop_toBottomOf="@id/card_prediction"
+                app:cardCornerRadius="@dimen/corner_radius_2"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginTop="@dimen/content_padding_1"
+                app:cardElevation="1dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:tag="3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    bind:imageUrl="@{obj.covers.ranking}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

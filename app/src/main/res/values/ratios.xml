@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ratio_3_2">H, 3:2</string>
+    <string name="ratio_4_3">H, 4:3</string>
+    <string name="ratio_16_9">H, 16:9</string>
+    <string name="ratio_16_10">H, 16:10</string>
+    <string name="ratio_16_11">H, 16:11</string>
+    <string name="ratio_21_9">H, 21:9</string>
+    <string name="ratio_1_1">H, 1:1</string>
+    <string name="ratio_9_16">H, 9:16</string>
+    <string name="ratio_3_4">H, 3:4</string>
+    <string name="ratio_2_3">H, 2:3</string>
+
+    <string name="ratio_16_9_w">W, 16:9</string>
+    <string name="ratio_4_3_w">W, 4:3</string>
+    <string name="ratio_9_16_w">W, 9:16</string>
+    <string name="ratio_1_1_w">W, 1:1</string>
+
+</resources>

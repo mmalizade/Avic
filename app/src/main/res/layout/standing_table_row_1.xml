@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+
+
+    <data>
+
+        <variable name="obj"
+                  type="ir.moovic.entertainment.app.football.model.StandingModel.StandingTableItemModel"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/standing_table_row_bg_color"
+        android:paddingTop="@dimen/standing_table_row_padding_top"
+        android:paddingBottom="@dimen/standing_table_row_padding_top"
+        android:paddingStart="@dimen/standing_table_row_padding_right"
+        android:paddingEnd="@dimen/standing_table_row_padding_right"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@{String.valueOf(obj.points)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@{String.valueOf(obj.diff)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@{String.valueOf(obj.defeats)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@{String.valueOf(obj.draws)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@{String.valueOf(obj.victories)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@{String.valueOf(obj.played)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:text="@{obj.team.title ?? null}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="right|center_vertical"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+
+        <ir.moovic.entertainment.ui.helper.MyImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="right|center_vertical"
+            app:myiv_ratioW="1"
+            app:myiv_ratioH="1"
+            bind:imageUrl="@{obj.team.logo ?? null}"
+            android:layout_gravity="center_vertical"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@{String.valueOf(obj.rank)}"
+            android:lines="1" android:maxLines="1"
+            android:gravity="center"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeMaxTextSize="13sp"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/standing_table_header_text_color"
+            />
+
+    </LinearLayout>
+
+</layout>

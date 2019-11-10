@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="java.lang.String"/>
+    </data>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1" android:maxLines="1"
+        android:textColor="@color/news_tag_text_color"
+        android:background="@drawable/news_tag_text_bg"
+        android:paddingTop="@dimen/content_padding_0"
+        android:paddingBottom="@dimen/content_padding_0"
+        android:paddingStart="@dimen/content_padding_3"
+        android:paddingEnd="@dimen/content_padding_3"
+        android:text="@{obj}"
+        android:textSize="12sp"
+        />
+
+</layout>
+

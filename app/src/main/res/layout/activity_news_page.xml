@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.newspaper.model.NewsModel"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:scrollbarStyle="insideOverlay"
+            android:id="@+id/main_view"
+            android:layout_marginTop="?attr/actionBarSize"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/content_padding_2"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/frame_res"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:orientation="horizontal"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_res_logo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:scaleType="fitCenter"
+                            bind:imageUrlCircleCrop="@{obj.resourceLogo}"
+                            android:layout_margin="@dimen/content_padding_0"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_res_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintEnd_toStartOf="@id/iv_res_logo"
+                            app:layout_constraintTop_toTopOf="@id/iv_res_logo"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_res_logo"
+                            android:gravity="center_vertical"
+                            android:lines="1"
+                            android:maxLines="1"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMinTextSize="8sp"
+                            app:autoSizeMaxTextSize="11sp"
+                            android:text="@{obj.resourceTitle}"
+                            android:textColor="@color/text_color_4"
+                            android:layout_marginStart="@dimen/content_padding_0"
+                            android:layout_marginEnd="@dimen/content_padding_0"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_publish_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/frame_res"
+                        app:layout_constraintBottom_toBottomOf="@id/frame_res"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:maxLines="1"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeMaxTextSize="11sp"
+                        android:textColor="@color/text_color_4"
+                        android:layout_marginStart="@dimen/content_padding_0"
+                        android:layout_marginEnd="@dimen/content_padding_0"
+                        android:text="@{obj.publishTime}"
+                        />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="@string/ratio_4_3"
+                        android:layout_marginTop="@dimen/content_padding_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/frame_res"
+                        app:cardCornerRadius="@dimen/corner_radius_1"
+                        app:cardElevation="0dp"
+                        android:padding="0dp"
+                        app:cardBackgroundColor="@android:color/transparent">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/image_slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:sliderAnimationDuration="600"
+                            app:sliderAutoCycleDirection="left"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderCircularHandlerEnabled="true"
+                            app:sliderIndicatorAnimationDuration="600"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMargin="2dp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="3dp"
+                            app:sliderIndicatorRadius="1dp"
+                            app:sliderIndicatorSelectedColor="@color/text_color_1"
+                            app:sliderIndicatorUnselectedColor="@color/text_color_6"
+                            app:sliderScrollTimeInSec="6"
+                            bind:sliderImageUrls="@{obj.images}"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ir.moovic.entertainment.ui.helper.TextViewEx
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_padding_2"
+                    android:padding="@dimen/content_padding_2"
+                    android:gravity="right|top"
+                    android:textSize="24sp"
+                    android:textColor="@color/text_color_1"
+                    fontPath="@string/font_yekan_bold"
+                    android:text="@{obj.title}"
+                    />
+
+                <FrameLayout
+                    android:layout_marginTop="@dimen/content_padding_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/content_padding_2"
+                    android:paddingEnd="@dimen/content_padding_2"
+                    >
+
+                    <WebView
+                        android:id="@+id/webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        bind:webHtml="@{obj.body}"
+                        />
+
+                </FrameLayout>
+
+                <!--<androidx.appcompat.widget.AppCompatTextView-->
+                    <!--android:id="@+id/tv_body"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/content_padding_3"-->
+                    <!--bind:textHtml="@{obj.body}"-->
+                    <!--android:textColor="@color/text_color_2"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:gravity="right|top"-->
+                    <!--/>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_padding_2"
+                    bind:tagNames="@{obj.tags}"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ad_container_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/corner_radius_1">
+
+                    <ir.moovic.entertainment.ad.TapsellBannerView1
+                        android:id="@+id/tapsell_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:tapsell_banner_type="banner_320x100"
+                        app:tapsell_zone_id="@string/tapsell_zone_id_standard_banner"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_1"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/loading_layout_1"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+            />
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            style="@style/app_bar_1"
+            >
+
+            <include layout="@layout/toolbar1"
+                     android:id="@+id/toolbar"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

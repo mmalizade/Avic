@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="obj"
+            type="ir.moovic.entertainment.app.football.activities.LeagueActivity.TopHeaderModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_iv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintDimensionRatio="@string/ratio_16_9_w"
+            app:cardCornerRadius="@dimen/corner_radius_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardElevation="@dimen/list_item_1_elevation"
+            app:cardBackgroundColor="@android:color/transparent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                bind:imageUrl="@{obj.imageUrl}"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1" android:maxLines="1"
+                android:text="@{obj.title}"
+                android:textColor="@color/text_color_8"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@{obj.selected ? (@color/league_top_headre_list_item_text_bg) : (@android:color/transparent)}"
+                android:paddingStart="@dimen/content_padding_0"
+                android:paddingEnd="@dimen/content_padding_0"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeMaxTextSize="12sp"
+                android:visibility="gone"
+                />
+
+            <View
+                android:id="@+id/fg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#aa000000"
+                bind:visible="@{!obj.selected}"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
