@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.NonNull;
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 import ir.moovic.entertainment.network.BaseInterceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -34,7 +34,7 @@ public class ApiClient {
                     .build();
 
             client = new Retrofit.Builder()
-                    .baseUrl(Config.API_BASE_URL)
+                    .baseUrl(AppConfig.API_BASE_URL)
                     .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
@@ -60,7 +60,7 @@ public class ApiClient {
                 .build();
 
         return new Retrofit.Builder()
-                .baseUrl(Config.API_BASE_URL)
+                .baseUrl(AppConfig.API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }

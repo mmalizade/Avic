@@ -2,7 +2,7 @@ package ir.moovic.entertainment.ui.helper.imageslider;
 
 import android.content.Context;
 
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 
 public class ImageSliderAdapter1 extends ImageSliderAdapterBase {
 
@@ -20,7 +20,7 @@ public class ImageSliderAdapter1 extends ImageSliderAdapterBase {
     @Override
     public String getImageUrl(int position) {
         try {
-            return Config.mediaUrl(images[position]);
+            return AppConfig.mediaUrl(images[position]);
         } catch (Exception e){
             return "";
         }

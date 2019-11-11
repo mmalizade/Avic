@@ -21,7 +21,7 @@ import ir.moovic.entertainment.app.config.GlideApp;
 import ir.moovic.entertainment.app.config.base.MyBaseActivity;
 import ir.moovic.entertainment.app.football.fragments.FrMatchPrediction;
 import ir.moovic.entertainment.app.football.model.MatchModel;
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 import ir.moovic.entertainment.network.RetrofitCallback;
 import ir.moovic.entertainment.ui.pager.CardScaleTransformer;
 import retrofit2.Call;
@@ -58,7 +58,7 @@ public class PredictionActivity extends MyBaseActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String cover = extras.getString("cover", null);
-            GlideApp.with(this).load(Config.mediaUrl(cover)).into(ivAppbarImage);
+            GlideApp.with(this).load(AppConfig.mediaUrl(cover)).into(ivAppbarImage);
         }
         load();
     }

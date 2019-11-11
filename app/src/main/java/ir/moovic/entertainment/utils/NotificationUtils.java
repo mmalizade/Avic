@@ -30,7 +30,7 @@ import java.util.Locale;
 
 import androidx.core.app.NotificationCompat;
 import ir.moovic.entertainment.R;
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 
 
 public class NotificationUtils {
@@ -112,7 +112,7 @@ public class NotificationUtils {
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (notificationManager != null) {
-            notificationManager.notify(Config.NOTIFICATION_ID, notification);
+            notificationManager.notify(AppConfig.NOTIFICATION_ID, notification);
         }
     }
 
@@ -136,7 +136,7 @@ public class NotificationUtils {
 
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
-            notificationManager.notify(Config.NOTIFICATION_ID_BIG_IMAGE, notification);
+            notificationManager.notify(AppConfig.NOTIFICATION_ID_BIG_IMAGE, notification);
         }
     }
 

@@ -26,7 +26,7 @@ import ir.moovic.entertainment.app.config.base.MyBaseActivity;
 import ir.moovic.entertainment.app.football.fragments.FrLeagueMatches;
 import ir.moovic.entertainment.app.football.fragments.FrLeagueStanding;
 import ir.moovic.entertainment.app.football.model.LeagueModel;
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 import ir.moovic.entertainment.utils.recyclerview.ItemAdapter2;
 import ir.moovic.entertainment.utils.recyclerview.RtlHorizontalLayoutManager;
 import ir.moovic.entertainment.utils.recyclerview.SpacesItemDecoration;
@@ -98,7 +98,7 @@ public class LeagueActivity extends MyBaseActivity {
         }
         if(extras.containsKey("league")) {
             league = extras.getParcelable("league");
-            GlideApp.with(this).load(Config.mediaUrl(league.cover)).into(ivAppbarImage);
+            GlideApp.with(this).load(AppConfig.mediaUrl(league.cover)).into(ivAppbarImage);
         }
         int tag = extras.getInt("tag", 0);
         viewPager.setCurrentItem(tag % pagerAdatper.getCount());

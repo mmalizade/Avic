@@ -15,7 +15,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import ir.moovic.entertainment.R;
 import ir.moovic.entertainment.app.football.model.TeamModel;
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 
 
 public class TeamInfoView extends LinearLayout {
@@ -37,7 +37,7 @@ public class TeamInfoView extends LinearLayout {
         if(team == null) return;
         tv_teamName.setText(team.title);
         Glide.with(getContext())
-                .load(Config.mediaUrl(team.logo))
+                .load(AppConfig.mediaUrl(team.logo))
                 .apply(new RequestOptions().fitCenter()
                         .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC))
                 .into(iv_logo);

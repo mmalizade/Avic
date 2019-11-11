@@ -22,7 +22,6 @@ import com.smarteist.autoimageslider.SliderView;
 import com.willy.ratingbar.BaseRatingBar;
 
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.widget.TextViewCompat;
 import androidx.databinding.BindingAdapter;
@@ -31,7 +30,7 @@ import cn.carbswang.android.numberpickerview.library.NumberPickerView;
 import ir.moovic.entertainment.R;
 import ir.moovic.entertainment.app.football.model.MatchModel;
 import ir.moovic.entertainment.app.football.ui.MatchInfoView;
-import ir.moovic.entertainment.controller.Config;
+import ir.moovic.entertainment.controller.AppConfig;
 import ir.moovic.entertainment.ui.adapter.TagAdapter1;
 import ir.moovic.entertainment.ui.helper.MyImageView;
 import ir.moovic.entertainment.ui.helper.imageslider.ImageSliderAdapter1;
@@ -47,7 +46,7 @@ public class BindingUtils {
     @BindingAdapter("bind:imageUrl")
     public static void bindimageUrl(AppCompatImageView imageView, String imageUrl) {
         Glide.with(imageView.getContext())
-                .load(Config.mediaUrl(imageUrl))
+                .load(AppConfig.mediaUrl(imageUrl))
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.AUTOMATIC))
                 .apply(RequestOptions.skipMemoryCacheOf(false))
 //                .transition(DrawableTransitionOptions.with(new GlideNullTransition()))
@@ -57,7 +56,7 @@ public class BindingUtils {
     @BindingAdapter("bind:imageUrlCircleCrop")
     public static void bindImageUrlCircleCrop(AppCompatImageView imageView, String imageUrl) {
         Glide.with(imageView.getContext())
-                .load(Config.mediaUrl(imageUrl))
+                .load(AppConfig.mediaUrl(imageUrl))
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.AUTOMATIC))
                 .apply(RequestOptions.skipMemoryCacheOf(false))
                 .apply(RequestOptions.bitmapTransform(new CircleCrop()))

@@ -3,9 +3,9 @@ package ir.moovic.entertainment.controller;
 
 import android.text.TextUtils;
 
-public class Config {
+public class AppConfig {
 
-    public static final String BASE_URL = "http://192.168.1.15:8000/";
+    public static final String BASE_URL = "http://avic.moovic.ir/";
     public static final String MEDIA_BASE_URL = BASE_URL;
 
     public static final String API_BASE_URL = BASE_URL + "api/";
@@ -15,7 +15,7 @@ public class Config {
     public static final String ACADEMY_API_BASE_URL = API_BASE_URL + "academy/";
 
 
-    public static String mediaUrl(String url){
+    public static String mediaUrl(String url) {
         if(!TextUtils.isEmpty(url)){
             if(url.startsWith("http")){
                 return url;
