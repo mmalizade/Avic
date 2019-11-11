@@ -5,6 +5,10 @@ import android.text.TextUtils;
 
 public class AppConfig {
 
+
+    //////////erfan
+
+
     public static final String BASE_URL = "http://avic.moovic.ir/";
     public static final String MEDIA_BASE_URL = BASE_URL;
 
