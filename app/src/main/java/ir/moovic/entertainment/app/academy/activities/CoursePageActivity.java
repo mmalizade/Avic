@@ -1,5 +1,6 @@
 package ir.moovic.entertainment.app.academy.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -155,6 +156,10 @@ public class CoursePageActivity extends MyBaseActivity implements CoursePagePres
                 if(activity == null) return;
                 int pos = activity.sectionAdapter.getOriginalPositionForPosition(position);
                 VideoModel model = getItem(pos);
+                activity.startActivity(new Intent(activity,VideoPlayActivity.class)
+                        .putExtra("video",model.video)
+                        .putExtra("model",model));
+
             }
         }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="ir.moovic.entertainment">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ir.moovic.entertainment">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".app.config.App"
@@ -17,36 +17,31 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-
-        <activity android:name=".app.cartoon.activities.CartoonActivity">
-        </activity>
-        <activity android:name=".app.football.activities.PredictionActivity">
-        </activity>
-        <activity android:name=".app.football.activities.LeagueActivity">
-        </activity>
+        <activity android:name=".app.cartoon.activities.CartoonActivity"></activity>
+        <activity android:name=".app.football.activities.PredictionActivity"></activity>
+        <activity android:name=".app.football.activities.LeagueActivity"></activity>
         <activity android:name=".app.main.MainActivtiy">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestActivity"/>
-        <activity android:name=".app.football.activities.FootballActivity"/>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".app.football.activities.FootballActivity" />
         <activity
             android:name="ir.tapsell.sdk.TapsellAdActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>
-        <activity android:name=".app.newspaper.activities.NewsCategoriesActivity"/>
-        <activity android:name=".app.newspaper.activities.NewsListActivity"/>
-        <activity android:name=".app.newspaper.activities.NewsPageActivity"/>
+            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name=".app.newspaper.activities.NewsCategoriesActivity" />
+        <activity android:name=".app.newspaper.activities.NewsListActivity" />
+        <activity android:name=".app.newspaper.activities.NewsPageActivity" />
+        <activity android:name=".app.cartoon.activities.CartoonPageActivity" />
+        <activity android:name=".app.cartoon.activities.CartoonProductListActivity" />
+        <activity android:name=".app.academy.activities.CourseListActivity" />
+        <activity android:name=".app.academy.activities.CoursePageActivity" />
+        <activity android:name=".app.academy.activities.VideoPlayActivity"
 
-        <activity android:name=".app.cartoon.activities.CartoonPageActivity"/>
-        <activity android:name=".app.cartoon.activities.CartoonProductListActivity"/>
-        <activity android:name=".app.academy.activities.CourseListActivity"/>
-        <activity android:name=".app.academy.activities.CoursePageActivity"/>
-
-
+            android:configChanges="orientation|screenSize"/>
     </application>
 
 </manifest>

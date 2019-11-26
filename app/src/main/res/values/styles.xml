@@ -11,7 +11,8 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:screenOrientation">portrait</item>
         <item name="android:windowBackground">@color/colorWindowBackground</item>
-        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorStatusBar</item>
     </style>
 
