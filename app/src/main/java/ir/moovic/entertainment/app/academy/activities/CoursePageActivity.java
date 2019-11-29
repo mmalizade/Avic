@@ -2,12 +2,9 @@ package ir.moovic.entertainment.app.academy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.google.gson.Gson;
 
 import java.lang.ref.WeakReference;
 
@@ -22,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ir.moovic.entertainment.R;
+import ir.moovic.entertainment.app.academy.dialogs.DialogFrDescription;
 import ir.moovic.entertainment.app.academy.model.CourseModel;
 import ir.moovic.entertainment.app.academy.model.VideoModel;
 import ir.moovic.entertainment.app.academy.presenter.CoursePagePresenter;
@@ -32,7 +30,6 @@ import ir.moovic.entertainment.ui.helper.section.DynamicSectionsAdapter;
 import ir.moovic.entertainment.ui.helper.section.NullViewHolder;
 import ir.moovic.entertainment.utils.recyclerview.ItemAdapter1;
 import ir.moovic.entertainment.utils.recyclerview.ItemViewHolder1;
-import ir.moovic.entertainment.utils.recyclerview.SpacesItemDecoration;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -98,11 +95,12 @@ public class CoursePageActivity extends MyBaseActivity implements CoursePagePres
     @Override
     public void showInformation(View v) {
 
+       DialogFrDescription dialog= DialogFrDescription.newInstance(course);
+       dialog.show(getSupportFragmentManager(),"descrtiption");
     }
 
     @Override
     public void payment(View v) {
-
     }
 
     private static class Callback1 extends RetrofitCallback<CourseModel> {

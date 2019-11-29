@@ -21,6 +21,7 @@ import java.lang.ref.WeakReference;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ir.moovic.entertainment.R;
+import ir.moovic.entertainment.app.config.App;
 import ir.moovic.entertainment.app.config.base.MyBaseActivity;
 import ir.moovic.entertainment.controller.AppConfig;
 
@@ -31,6 +32,7 @@ public class VideoPlayActivity extends MyBaseActivity {
     boolean alwaysLandscape = true;
 
     Uri uri;
+    String video;
     @BindView(R.id.vp)
     VideoView VideoPlayer;
 
@@ -59,7 +61,7 @@ public class VideoPlayActivity extends MyBaseActivity {
     private void initVideo() {
         if (getIntent().hasExtra("video")) {
 
-            String video = getIntent().getStringExtra("video");
+            video = getIntent().getStringExtra("video");
 
             if (!TextUtils.isEmpty(video)) {
 
